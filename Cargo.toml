@@ -1,0 +1,8 @@
+[project]
+name = "reven"
+resolver = "2"
+
+[workspace]
+members = [
+    "reven-term"
+]

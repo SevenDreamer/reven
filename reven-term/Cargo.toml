@@ -1,0 +1,19 @@
+[package]
+name = "reven-term"
+version = "0.1.0"
+edition = "2021"
+default-run = "rn" # 设置默认执行命令
+
+[dependencies]
+
+
+[profile.release]
+lto = "thin"
+# debug = true
+
+[profile.opt]
+inherits = "release"
+lto = "fat"
+codegen-units = 1
+# strip = "debuginfo" # TODO: or strip = true
+opt-level = 3
